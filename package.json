@@ -1,0 +1,25 @@
+{
+  "name": "@skpm/events",
+  "version": "0.1.0",
+  "description": "A sketch module to interact with the file system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skpm/events.git"
+  },
+  "keywords": [
+    "sketch",
+    "module",
+    "events",
+    "EventEmitter"
+  ],
+  "author": "Mathieu Dutour <mathieu@dutour.me> (http://mathieu.dutour.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skpm/events/issues"
+  },
+  "homepage": "https://github.com/skpm/events#readme"
+}
