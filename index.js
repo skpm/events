@@ -125,7 +125,7 @@ proto.on = function on (evt, listener) {
 
   this.emit('newListener', evt, listenerIsWrapped ? listener.listener : listener)
 
-  listeners[evt].push(
+  listeners.push(
     listenerIsWrapped
     ? listener
     : {
@@ -166,7 +166,7 @@ proto.prependListener = function prependListener (evt, listener) {
 
   this.emit('newListener', evt, listenerIsWrapped ? listener.listener : listener)
 
-  listeners[evt].unshift(
+  listeners.unshift(
     listenerIsWrapped
     ? listener
     : {
@@ -224,12 +224,11 @@ proto.removeAllListeners = function removeAllListeners (evt) {
 */
 proto.removeListener = function removeListener (evt, listener) {
   var listeners = this._getListeners(evt)
-  var key
 
-  var index = indexOfListener(listeners[key], listener)
+  var index = indexOfListener(listeners, listener)
 
   if (index !== -1) {
-    listeners[key].splice(index, 1)
+    listeners.splice(index, 1)
 
     this.emit('removeListener', evt, listener)
   }
