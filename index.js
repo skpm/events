@@ -57,20 +57,16 @@ proto.addListener = alias('on')
 */
 proto.emit = function emit (evt) {
   var args = Array.prototype.slice.call(arguments, 1)
-  var listeners = this._getListeners(evt) || []
-  var listener
-  var i
-  var key
-  var response
+  var listeners = this._getListeners(evt)
 
-  for (i = 0; i < listeners.length; i++) {
-    listener = listeners[i]
+  for (var i = 0; i < listeners.length; i++) {
+    var listener = listeners[i]
 
     if (listener.once === true) {
       this.removeListener(evt, listener.listener)
     }
 
-    response = listener.listener.apply(this, args || [])
+    listener.listener.apply(this, args || [])
   }
 
   return listeners.length > 0
