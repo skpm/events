@@ -1,11 +1,15 @@
 {
   "name": "@skpm/events",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Drop-in replacement for the events NodeJS package",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./build.sh"
   },
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skpm/events.git"
@@ -21,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/skpm/events/issues"
   },
-  "homepage": "https://github.com/skpm/events#readme"
+  "homepage": "https://github.com/skpm/events#readme",
+  "devDependencies": {
+    "events": "^3.0.0"
+  }
 }
